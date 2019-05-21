@@ -8,8 +8,8 @@
         <!-- <text-vue v-model="text"></text-vue>
         <span>父组件:</span>  {{text}}-->
 
-        <pra :text="text" :text.sync="text"></pra><br/>
-        <span>父组件:</span> {{text}}
+        <!-- <pra :text="text" :text.sync="text"></pra><br/>
+        <span>父组件:</span> {{text}} -->
 
     </div>
 </template>
