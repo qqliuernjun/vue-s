@@ -20,7 +20,12 @@ export default {
         }
     },
     computed:{
-       
+        a(){
+            return 'a'
+        },
+        b(){
+            return this.a
+        }
 
     },
     methods:{
@@ -30,8 +35,7 @@ export default {
 
     },
     mounted(){
-       
-
+    
     }
 }
 </script>
