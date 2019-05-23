@@ -6,18 +6,21 @@
  */
 const fs=require("fs");
 const path=require("path");
-let rs=fs.createReadStream("src/assets/horse.jpg");
-let ws=fs.createWriteStream("src/assets/aa.jpg");
+
+// let rs=fs.createReadStream(`${process.cwd()}/src/assets/horse.jpg`);
+let rs=fs.createReadStream(`${path.resolve(__dirname, '../')}/src/assets/horse.jpg`);
+let ws=fs.createWriteStream("src/assets/复制.jpg");
 rs.pipe(ws);
 
+// console.log(`${process.cwd()}/src/assets/horse.jpg`);
+// console.log(`${path.resolve(__dirname, '../')}/src/assets/horse.jpg`);
 
 rs.on('err',err=>{
     console.log(err);
-})
-
+});
 
 ws.on('finish',()=>{
     console.log("完成")
-})
+});
 
 
