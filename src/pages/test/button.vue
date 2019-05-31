@@ -38,7 +38,6 @@ export default {
         }
     },
     mounted(){
-        console.log(this.$slots)
         this.showStatus=this.prefixCls=='ico'
     }
 }
@@ -54,5 +53,5 @@ export default {
             background: red;
         }
     }
-    
+
 </style>
