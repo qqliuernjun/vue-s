@@ -1,6 +1,6 @@
 <template>
     <div class="functionalPra">
-        <FunctionalTemplate v-for="item in temData" :key="item" v-bind="item"/>
+        <FunctionalTemplate v-model="datas[item.prop]" v-for="item in temData"  v-bind="item"/>
     </div>
 </template>
 
@@ -19,6 +19,11 @@
         },
         data(){
             return{
+                datas:{
+                    inputVal:"",
+                    selectVal:"",
+                    checkboxVal:[]
+                },
                 temData:[
                     {
                         type:'Input',
@@ -28,19 +33,45 @@
                         },
                         on:{
                             'on-change':(event)=>{
-                                console.log(event);
+                                console.log(event)
                             }
-                        }
+                        },
+                        prop:"inputVal"
                     },
                     {
                         type:'Select',
+                        style: {
+                            width:'700px'
+                        },
+                        on:{
+                            'on-change':(val)=>{
+                                console.log(`触发了Select的on-change事件,${val}`)
+                            }
+                        },
+                        children: {
+                            childType:"Option",
+                            childData:[
+                                {label: "张三", value: "0"},
+                                {label: "李四", value: "1"}
+                            ]
+                        },
+                        prop:"selectVal"
+                    },
+                    {
+                        type:'CheckboxGroup',
+                        prop:'checkboxVal',
                         class: {
                             bar: true
                         },
-                        style: {
-                            width:'700px'
+                        children: {
+                            childType:"Checkbox",
+                            childData:[
+                                {label: "香蕉"},
+                                {label: "苹果"},
+                                {label: "西瓜"}
+                            ]
                         }
-                    }
+                    },
                 ]
             }
         }
@@ -55,6 +86,8 @@
             margin-bottom: 15px;
             width: 600px;
         }
+        .bar{
+            margin-top: 10px;
+        }
     }
-
 </style>
