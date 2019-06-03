@@ -1,6 +1,6 @@
 <template>
     <div class="functionalPra">
-        <FunctionalTemplate v-model="datas[item.prop]" v-for="item in temData"  v-bind="item"/>
+        <FunctionalTemplate v-model="datas[item.prop]" v-for="(item,index) in temData" :key="index"  v-bind="item"/>
     </div>
 </template>
 
