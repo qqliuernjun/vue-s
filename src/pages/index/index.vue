@@ -3,12 +3,18 @@
         <template v-for="(item,index) in routerData">
             <Button @click="link(item)">{{item.name}}</Button>
         </template>
+        <!--<hello></hello>-->
     </div>
 </template>
 
 <script>
+    import hello from "../../components/HelloWorld"
     import router from "../../router"
   export default {
+      name:"index",
+      components:{
+          hello
+      },
       data() {
         return {
             router
@@ -24,7 +30,10 @@
       methods:{
         link(item){
             this.$router.push({
-                name:item.name
+                name:item.name,
+                query:{
+                    date:new Date().getTime()
+                }
             })
         }
       },

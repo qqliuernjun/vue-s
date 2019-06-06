@@ -46,7 +46,10 @@
             }
         },
         created(){
-            console.log(test_validator)
+            checkReg.number.validator({dot:"",regexp:"",message:""},"aa",(val)=>{
+                console.log(val);
+            });
+            console.log(checkReg);
         }
     }
 </script>
@@ -60,7 +63,7 @@
 
         url(../assets/horse.jpg);
         background-repeat: no-repeat;
-      
+
     }
 </style>
 

@@ -5,8 +5,8 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint":  "vue-cli-service lint",
-    "custom":"node script/practice.js"
+    "lint": "vue-cli-service lint",
+    "custom": "node script/practice.js"
   },
   "dependencies": {
     "core-js": "^2.6.5",
@@ -15,6 +15,7 @@
     "vue-router": "^3.0.6"
   },
   "devDependencies": {
+    "@tydic-group/plugin-regular-check": "^0.0.1",
     "@vue/cli-plugin-babel": "^3.7.0",
     "@vue/cli-plugin-eslint": "^3.7.0",
     "@vue/cli-service": "^3.7.0",
