@@ -25,7 +25,7 @@
                     name: [
                         {
                             'required': true,
-                            'validator': test_validator.number1.validator
+                            'validator': checkReg.number1.validator
                         }
                     ]
                 }
