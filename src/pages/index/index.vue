@@ -3,7 +3,7 @@
         <template v-for="(item,index) in routerData">
             <Button @click="link(item)">{{item.name}}</Button>
         </template>
-        <!--<hello></hello>-->
+        <hello></hello>
     </div>
 </template>
 

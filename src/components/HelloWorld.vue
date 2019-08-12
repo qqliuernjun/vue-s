@@ -46,17 +46,17 @@
             }
         },
         created(){
-            checkReg.number.validator({dot:"",regexp:"",message:""},"aa",(val)=>{
-                console.log(val);
-            });
-            console.log(checkReg);
+            // checkReg.number.validator({dot:"",regexp:"",message:""},'111',(val)=>{
+            //     console.log(val);
+            // });
+            checkReg.custom.validator({dot:"",regexp:"",message:"",validateType:'number'},'aaa',(val)=>{
+
+            },{});
         }
     }
 </script>
 <style>
    .img{
-       width: 500px;
-       height: 300px;
         background-image:
 
         linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,1)),

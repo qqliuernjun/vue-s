@@ -1,7 +1,14 @@
 {
-  "name": "hello-vue",
+  "name": "vueS",
   "version": "0.1.0",
   "private": false,
+  "main": "./bin/index.js",
+  "bin": {
+    "magic":"./bin/index.js"
+  },
+  "files": [
+    "bin"
+  ],
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
